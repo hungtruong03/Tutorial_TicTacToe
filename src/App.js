@@ -1,4 +1,4 @@
-//Deploy tại đường dẫn https://hungtruong03.github.io/AWP_TicTacToe
+//Deploy tại đường dẫn https://hungtruong03.github.io/Tutorial_TicTacToe
 
 import { useState } from 'react';
 
@@ -86,7 +86,7 @@ export default function Game() {
     if (move > 0) {
       const row = Math.floor(turnInfo.index / 3) + 1;
       const col = turnInfo.index % 3 + 1;
-      const symbol = turnInfo.index % 2 === 0 ? 'X' : 'O';
+      const symbol = move % 2 === 0 ? 'O' : 'X';
       description = 'Go to move #' + move + ' - ' + symbol + '(' + row + ', ' + col + ')';
     } else {
       description = 'Go to game start';
